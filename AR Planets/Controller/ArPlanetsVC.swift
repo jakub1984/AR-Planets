@@ -10,12 +10,15 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ArPlanetsVC: UIViewController, ARSCNViewDelegate {
+   
+    var passedPlanet : String!
 
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(passedPlanet)
         
         // Set the view's delegate
         sceneView.delegate = self

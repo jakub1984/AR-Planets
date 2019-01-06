@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		F88368E821E23DA7000BBAB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88368E721E23DA7000BBAB4 /* AppDelegate.swift */; };
 		F88368EA21E23DA7000BBAB4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F88368E921E23DA7000BBAB4 /* art.scnassets */; };
-		F88368EC21E23DA7000BBAB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88368EB21E23DA7000BBAB4 /* ViewController.swift */; };
+		F88368EC21E23DA7000BBAB4 /* ArPlanetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88368EB21E23DA7000BBAB4 /* ArPlanetsVC.swift */; };
 		F88368EF21E23DA7000BBAB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88368ED21E23DA7000BBAB4 /* Main.storyboard */; };
 		F88368F121E23DA9000BBAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88368F021E23DA9000BBAB4 /* Assets.xcassets */; };
 		F88368F421E23DA9000BBAB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88368F221E23DA9000BBAB4 /* LaunchScreen.storyboard */; };
+		F88368FC21E23F80000BBAB4 /* PlanetSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88368FB21E23F80000BBAB4 /* PlanetSelectionVC.swift */; };
+		F88368FE21E24434000BBAB4 /* PlanetsDirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88368FD21E24434000BBAB4 /* PlanetsDirectoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F88368E421E23DA7000BBAB4 /* AR Planets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Planets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88368E721E23DA7000BBAB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F88368E921E23DA7000BBAB4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		F88368EB21E23DA7000BBAB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F88368EB21E23DA7000BBAB4 /* ArPlanetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArPlanetsVC.swift; sourceTree = "<group>"; };
 		F88368EE21E23DA7000BBAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F88368F021E23DA9000BBAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F88368F321E23DA9000BBAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F88368F521E23DA9000BBAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88368FB21E23F80000BBAB4 /* PlanetSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetSelectionVC.swift; sourceTree = "<group>"; };
+		F88368FD21E24434000BBAB4 /* PlanetsDirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsDirectoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		F88368E621E23DA7000BBAB4 /* AR Planets */ = {
 			isa = PBXGroup;
 			children = (
+				F883690121E24448000BBAB4 /* Model */,
+				F883690021E24441000BBAB4 /* View */,
+				F88368FF21E24439000BBAB4 /* Controller */,
 				F88368E721E23DA7000BBAB4 /* AppDelegate.swift */,
-				F88368E921E23DA7000BBAB4 /* art.scnassets */,
-				F88368EB21E23DA7000BBAB4 /* ViewController.swift */,
 				F88368ED21E23DA7000BBAB4 /* Main.storyboard */,
 				F88368F021E23DA9000BBAB4 /* Assets.xcassets */,
+				F88368E921E23DA7000BBAB4 /* art.scnassets */,
 				F88368F221E23DA9000BBAB4 /* LaunchScreen.storyboard */,
 				F88368F521E23DA9000BBAB4 /* Info.plist */,
 			);
 			path = "AR Planets";
+			sourceTree = "<group>";
+		};
+		F88368FF21E24439000BBAB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F88368EB21E23DA7000BBAB4 /* ArPlanetsVC.swift */,
+				F88368FB21E23F80000BBAB4 /* PlanetSelectionVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F883690021E24441000BBAB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F883690121E24448000BBAB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F88368FD21E24434000BBAB4 /* PlanetsDirectoryCell.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F88368EC21E23DA7000BBAB4 /* ViewController.swift in Sources */,
+				F88368FC21E23F80000BBAB4 /* PlanetSelectionVC.swift in Sources */,
+				F88368FE21E24434000BBAB4 /* PlanetsDirectoryCell.swift in Sources */,
+				F88368EC21E23DA7000BBAB4 /* ArPlanetsVC.swift in Sources */,
 				F88368E821E23DA7000BBAB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
