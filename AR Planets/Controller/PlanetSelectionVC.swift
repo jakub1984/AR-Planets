@@ -12,7 +12,7 @@ class PlanetSelectionVC: UIViewController, UITableViewDelegate, UITableViewDataS
     
     var planetToPass : String!
     @IBOutlet weak var planetTableView: UITableView!
-    var planets = ["sun", "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto" ]
+    var planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
