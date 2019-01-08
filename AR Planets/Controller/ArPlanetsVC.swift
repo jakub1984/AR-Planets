@@ -27,6 +27,7 @@ class ArPlanetsVC: UIViewController, ARSCNViewDelegate {
         addPlanet()
         addPlanetLabel()
         addShip()
+        sceneView.autoenablesDefaultLighting = true
         
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(dismiss(fromGesture:)))
         sceneView.addGestureRecognizer(gesture)
@@ -76,17 +77,14 @@ class ArPlanetsVC: UIViewController, ARSCNViewDelegate {
         let orbitAction = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2 * .pi, z: 0, duration: 8))
         let shipUpAction = SCNAction.move(to: SCNVector3(-0.35, 0.15, 0), duration: 2)
         let wait = SCNAction.wait(duration: 2)
-        let levelOff = SCNAction.rotateTo(x: 0, y: 0, z: 0, duration: 2.5)
+        let levelOff = SCNAction.rotateTo(x: 0, y: 0, z: 0.1, duration: 2.5)
         let shipDownAction = SCNAction.move(to: SCNVector3(-0.35, -0.15, 0), duration: 2)
         let upAndDownAction = SCNAction.sequence([shipUpAction, wait, shipDownAction, wait])
         let repeatUpAndDown = SCNAction.repeatForever(upAndDownAction)
-        let shipPitchUp = SCNAction.rotateBy(x: -0.5, y: 0, z: -0.17, duration: 1.5)
-        let shipPitchDown = SCNAction.rotateBy(x: 0.5, y: 0, z: 0.17, duration: 1.5)
+        let shipPitchUp = SCNAction.rotateBy(x: -0.5, y: 0, z: 0.1, duration: 1.5)
+        let shipPitchDown = SCNAction.rotateBy(x: 0.5, y: 0 , z: 0.1, duration: 1.5)
         let pitchUpAndDown = SCNAction.sequence([shipPitchUp, levelOff, shipPitchDown, levelOff])
         let rotateAndPitchRepeat = SCNAction.repeatForever(pitchUpAndDown)
-        
-        
-        
         
         let scene = SCNScene(named: "art.scnassets/ship.scn")
             if let shipNode = scene?.rootNode.childNode(withName: "ship", recursively: true) {
@@ -100,7 +98,6 @@ class ArPlanetsVC: UIViewController, ARSCNViewDelegate {
             shipNode.runAction(repeatUpAndDown)
             shipNode.runAction(rotateAndPitchRepeat)
             }
-        
     }
     
     
